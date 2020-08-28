@@ -1,7 +1,7 @@
 import 'package:clima/services/location.dart';
 import 'package:clima/services/networking.dart';
 
-const apiKey = 'e72ca729af228beabd5d20e3b7749713';
+const apiKey = '55e5cd63bab4c70bc583dd4bda7f0b27';
 const openWeatherMapURL = 'https://api.openweathermap.org/data/2.5/weather';
 
 class WeatherModel {
@@ -21,6 +21,7 @@ class WeatherModel {
         '$openWeatherMapURL?lat=${location.latitude}&lon=${location.longitude}&appid=$apiKey&units=metric');
 
     var weatherData = await networkHelper.getData();
+    print(weatherData);
     return weatherData;
   }
 
@@ -46,9 +47,9 @@ class WeatherModel {
 
   String getMessage(int temp) {
     if (temp > 25) {
-      return 'It\'s 🍦 time';
+      return 'زمان مناسبی برای خوردن 🍦';
     } else if (temp > 20) {
-      return 'Time for shorts and 👕';
+      return 'زمان آستین کوتاه و 👕 است';
     } else if (temp < 10) {
       return 'You\'ll need 🧣 and 🧤';
     } else {

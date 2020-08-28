@@ -52,7 +52,7 @@ class _CityScreenState extends State<CityScreen> {
                   Navigator.pop(context, cityName);
                 },
                 child: Text(
-                  'Get Weather',
+                  'دریافت آب و هوا',
                   style: kButtonTextStyle,
                 ),
               ),
